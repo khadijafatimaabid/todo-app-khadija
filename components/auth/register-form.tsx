@@ -7,11 +7,11 @@ import { Label } from "@/components/ui/label"
 
 export function RegisterForm() {
   return (
-    <div className="w-full max-w-md mx-auto space-y-6 p-8 bg-white rounded-2xl shadow-lg border-2 border-slate-900">
+    <div className="w-full max-w-md mx-auto space-y-6 p-6 sm:p-8 bg-white rounded-2xl shadow-lg border-2 border-slate-900">
 
       {/* Header */}
       <div className="space-y-2 text-center">
-        <h1 className="text-2xl font-bold text-slate-800">
+        <h1 className="text-xl sm:text-2xl font-bold text-slate-800">
           Create Account
         </h1>
         <p className="text-sm text-slate-500">
@@ -56,7 +56,7 @@ export function RegisterForm() {
         </div>
 
         {/* Button */}
-        <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white shadow-md">
+        <Button className=" w-full h-11 bg-blue-600 hover:bg-blue-800 text-white shadow-md">
           Create Account
         </Button>
 

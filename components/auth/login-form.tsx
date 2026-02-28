@@ -7,12 +7,12 @@ import { Label } from "@/components/ui/label"
 
 export function LoginForm() {
   return (
-    <div className="w-full max-w-md mx-auto space-y-6 p-6 border-2 border-slate-900 rounded-2xl shadow-sm bg-slate-100">
+    <div className="w-full max-w-md mx-auto space-y-6 p-6 sm:p-8 border-2 border-slate-900 rounded-2xl shadow-sm bg-slate-100">
     
       
       {/* Header */}
       <div className="space-y-2 text-center">
-        <h1 className="text-2xl font-bold">Sign In</h1>
+        <h1 className="text-xl sm:text-2xl font-bold">Sign In</h1>
         <p className="text-sm text-muted-foreground">
           Enter your email and password to access your account
         </p>
@@ -39,7 +39,7 @@ export function LoginForm() {
           />
         </div>
 
-        <Button className="w-full">
+        <Button className="w-full h-11 bg-blue-600 hover:bg-blue-800 text-white shadow-md">
           Login
         </Button>
 
