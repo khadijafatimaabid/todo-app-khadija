@@ -7,7 +7,7 @@ import { Label } from "@/components/ui/label"
 
 export function LoginForm() {
   return (
-    <div className="w-full max-w-md mx-auto space-y-6 p-6 sm:p-8 border-2 border-slate-900 rounded-2xl shadow-sm bg-slate-100">
+    <div className="w-full max-w-md mx-auto space-y-6 p-6 sm:p-8 border-2 border-slate-900 rounded-2xl shadow-sm bg-white">
     
       
       {/* Header */}
