@@ -39,6 +39,18 @@ export function useTasks() {
     setTasks(tasks.filter((task) => task.id !== id))
   }
 
+  const clearCompleted = () => {
+  setTasks(tasks.filter((task) => !task.completed))
+}
+
+  const editTask = (id: number, newTitle: string) => {
+  setTasks(
+    tasks.map((task) =>
+      task.id === id ? { ...task, title: newTitle } : task
+    )
+  )
+}
+
   const toggleTask = (id: number) => {
     setTasks(
       tasks.map((task) =>
@@ -54,6 +66,8 @@ export function useTasks() {
     addTask,
     deleteTask,
     toggleTask,
+    editTask,
+    clearCompleted,
   }
 }
 
