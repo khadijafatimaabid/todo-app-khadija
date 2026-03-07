@@ -6,7 +6,7 @@ import AddTaskForm from "@/components/dashboard/add-task-form"
 import { useTasks } from "@/hooks/useTasks"
 
 export default function DashboardPage() {
-  const { tasks, addTask, deleteTask } = useTasks()
+  const { tasks, addTask, deleteTask, toggleTask } = useTasks()
 
   return (
     <div className="min-h-screen bg-slate-200 to bg-slate-300 p-6">
@@ -18,13 +18,17 @@ export default function DashboardPage() {
         <AddTaskForm onAdd={addTask} />
 
         <div className="space-y-4">
+
           {tasks.map((task) => (
             <TaskCard
               key={task.id}
               title={task.title}
+              completed={task.completed}
               onDelete={() => deleteTask(task.id)}
+              onToggle={() => toggleTask(task.id)}
             />
           ))}
+
         </div>
 
       </div>

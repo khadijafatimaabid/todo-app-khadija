@@ -1,12 +1,32 @@
 type Props = {
   title: string
+  completed: boolean
   onDelete: () => void
+  onToggle: () => void
 }
 
-export default function TaskCard({ title, onDelete }: Props) {
+export default function TaskCard({
+  title,
+  completed,
+  onDelete,
+  onToggle,
+}: Props) {
   return (
-    <div className="border-2 border-slate-300 rounded-lg p-4 flex justify-between items-center">
-      <span>{title}</span>
+    <div className="border rounded-lg p-4 flex justify-between items-center">
+
+      <div className="flex items-center gap-3">
+
+        <input
+          type="checkbox"
+          checked={completed}
+          onChange={onToggle}
+        />
+
+        <span className={completed ? "line-through text-gray-400" : ""}>
+          {title}
+        </span>
+
+      </div>
 
       <button
         onClick={onDelete}
@@ -14,6 +34,7 @@ export default function TaskCard({ title, onDelete }: Props) {
       >
         Delete
       </button>
+
     </div>
   )
 }
